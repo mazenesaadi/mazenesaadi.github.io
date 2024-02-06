@@ -1,0 +1,16 @@
+/* Your styles here! */
+h1 {
+    color: black;
+    font-family: Ariel;
+    font-size: 100%
+    text-align = center; 
+  }
+  p {
+    color: black;
+    font-family: Times 'Times New Roman', Times, serif;
+    font-size: 100%;
+  }
+  a:hover {
+    color: blue;
+    background-color: #cfc;
+  }
