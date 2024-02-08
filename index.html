@@ -1,96 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
 
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Welcome to my website!</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
 
-    <head style = "text-align:center";>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, I'm Mazen</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<div class = "container text-center">
-    <div class = "row">
-        <nav>
-            <div class = "column">
-                <a href="#about">About Me</a>>
-            </div>
-            
-            <div class = "column">
-                <a href="#skills">Skills</a>
-            </div>
-            
-            <div class = "column">
-                <a href="#projects">Projects</a>
-            </div>
-                
-            <div class = "column">
-                <a href="#contact">Contact</a>  <!-- List of links, scrolls user thru my site to the designated section. -->
-            </div>
-        </nav>
-        </div>
-    </div>
-</div>
-    <!-- --------------------------------------------------------------------------------------------------------------- -->
-
-    <section id="about">
-        <div class="container">
-            <h1 >About Me</h1>
-            <p>I'm a driven Computer Science student at George Washington University in my third year. My passion lies in Web Development, and I aspire to become a versatile full-stack developer. I'm adaptable, a strong communicator, and thrive on learning and problem-solving. I've developed my skills through hands-on projects and am excited to contribute my experience to real-world challenges. My goal is to create user-friendly and innovative solutions that make a meaningful impact.</p>
-        </div>
-    </section>  <!-- Add image(s) below <p> -->
-
-    <section id="skills">
-        <div class="container">
-            <h1>Skills</h1>
-            <ul>
-                <li>Programming Languages: Java, Python, JavaScript, etc.</li>
-                <li>Web Development: HTML, CSS, JavaScript, SQL, etc.</li>
-                <!-- Add more skills as needed -->
-            </ul>
-        </div>
-    </section>
-
-<!-- --------------------------------------------------------------------------------------------------------------- -->
-
-    <section id="projects">
-        <div class="container">
-            <h1>Projects</h1>
-            <!-- List your programming projects here with descriptions and links -->
-            <div class="project">
-                <h2>Project 1</h2>
-                <p>Description of Project 1.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project">
-                <h2>Project 2</h2>
-                <p>Description of Project 2.</p>
-                <a href="#">View Project</a>
-            </div>
-            <!-- Add more projects as needed -->
-        </div>
-    </section>
-
-<!-- --------------------------------------------------------------------------------------------------------------- -->
     
-    <section id="contact">
-        <div class="container">
-            <h1>Contact</h1>
-            <p>If you'd like to get in touch, feel free to contact me at mazenesaadi@gmail.com</p>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p></p>
-        </div>
-    </footer>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-</body>
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+
+
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Cover</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">About Me</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Experience</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <h1>Cover page.</h1>
+    <p class="lead">.</p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+    </p>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Cover template </p>
+  </footer>
+</div>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
 </html>
