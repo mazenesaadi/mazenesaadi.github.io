@@ -3,29 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-  </title>
+  <title>Centered Cards Example</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-</head>
-<body>
-<h1>Hello-Bootstrap</h1>
-</body>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">primary</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
-                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarID">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    
-                </div>
-            </div>
+  <style>
+    h1 {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        color: #333; /* Text color */
+    }
+  </style>
+</head>
+<body onload="window.scrollTo(0, 0)">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarID">
+        <div class="navbar-nav">
+          <a class="nav-link" href="#About">About Me</a>
+          <a class="nav-link" href="#Experience">Experience</a>
+          <a class="nav-link" href="#Skills">Skills</a>
+          <a class="nav-link" href="#Projects">Projects</a>
+          <a class="nav-link" href="#Contact">Contact</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>My Name is Mazen Saadi and I'm a&nbsp;<span class="auto-type"></span></h1>
+    <br>
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["Developer.", "Problem-Solver.", "Lifelong Learner.", "Communicator.", "Innovator.", "Team Player.", "Strategist.", "Critical Thinker.", "Leader.", "Tech Enthusiast.", "Collaborator.", "Programmer."],
+      typeSpeed: 75,
+      backSpeed: 150,
+      loop: true
+    });
+  </script>
+
+  <div class="container">
+    <div id="About" class="row justify-content-center mb-5">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">About Me</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            b5
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Experience" class="row justify-content-center mb-5">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Experience</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            b5
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Skills" class="row justify-content-center mb-5">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Skills</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            b5
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Projects" class="row justify-content-center mb-5">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Projects</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            b5
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Contact" class="row justify-content-center mb-5">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Contact</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            b5
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
 </html>
