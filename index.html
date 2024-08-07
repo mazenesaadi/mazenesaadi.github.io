@@ -36,18 +36,31 @@
   </nav>
 
   <div class="container">
-    <h1>My Name is Mazen Saadi and I'm a&nbsp;<span class="auto-type"></span></h1>
+    <h1><span class="auto-intro"></span>&nbsp;<span class="auto-type"></span></h1>
     <br>
   </div>
 
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
-    var typed = new Typed(".auto-type", {
-      strings: ["Developer.", "Problem-Solver.", "Lifelong Learner.", "Communicator.", "Innovator.", "Team Player.", "Strategist.", "Critical Thinker.", "Leader.", "Tech Enthusiast.", "Collaborator.", "Programmer."],
+
+  </script>
+  <script>
+    var typed = new Typed (".auto-intro", {
+      strings: ["My Name is Mazen Saadi and I'm a"],
       typeSpeed: 75,
-      backSpeed: 150,
-      loop: true
+      showCursor: false,
+      onComplete: function() { 
+        var typed = new Typed(".auto-type", {
+          strings: ["Developer.", "Problem-Solver.", "Lifelong Learner.", "Communicator.", "Innovator.", "Team Player.", "Strategist.", "Critical Thinker.", "Leader.", "Tech Enthusiast.", "Collaborator.", "Programmer."],
+          typeSpeed: 75,
+          backSpeed: 165,
+          loop: true
+        });
+      }
     });
+
+    var typedIntro = new Typed(".auto-intro", options);
+
   </script>
 
   <div class="container">
