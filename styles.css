@@ -66,6 +66,11 @@ body {
   background-color: transparent; /* Inherit from body */
 }
 
+/* Add uniform spacing between sections */
+.section-spacing {
+  margin-bottom: 40px; /* Adjust the value for equal spacing between all sections */
+}
+
 p { 
   text-indent: 50%;
 }
