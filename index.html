@@ -9,17 +9,108 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 
   <style>
-    h1 {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 28px;
-        color: #333; /* Text color */
+    /*
+     * Globals
+     */
+
+    /* Custom default button */
+    .btn-light,
+    .btn-light:hover,
+    .btn-light:focus {
+      color: #333;
+      text-shadow: none; /* Prevent inheritance from `body` */
     }
 
-    /*poop*/
+    /*
+     * Base structure
+     */
+    
+    body {
+      background-color: whitesmoke; /* Set your desired global background color */
+      color: black; /* Global black text */
+    }
+
+    /* Apply background only to the banner */
+    .banner {
+      position: relative;
+      height: 100vh; /* Full screen height */
+      background: url('images/rouche.jpeg') no-repeat center center/cover; /* Replace with your image path */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Overlay for the banner to make text more visible */
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    }
+
+    /* Typing effect container over the image */
+    .typing-container {
+      position: relative; /* Keeps it above the overlay */
+      color: whitesmoke;
+      z-index: 2; /* Ensures it's above the overlay */
+      text-align: center;
+      font-size: 28px;
+    }
+
+    /* Custom h1 for banner */
+    .typing-container h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    /* Container class without overriding global background */
+    .container, .row {
+      background-color: transparent; /* Inherit from body */
+      color: black; /* Ensures text remains black */
+    }
+
+    p { 
+      text-indent: 50%;
+    }
+
+    /* Header links */
+    .nav-masthead .nav-link {
+      color: rgba(255, 255, 255, .5);
+      border-bottom: .25rem solid transparent;
+    }
+
+    .nav-masthead .nav-link:hover,
+    .nav-masthead .nav-link:focus {
+      border-bottom-color: rgba(255, 255, 255, .25);
+    }
+
+    .nav-masthead .nav-link + .nav-link {
+      margin-left: 1rem;
+    }
+
+    .nav-masthead .active {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+
+    /* Add spacing between sections */
+    .section-spacing {
+      margin-bottom: 50px; /* Adjust this value to change the space between sections */
+    }
+
+    /* Adjust card width to match full container */
+    .card {
+      width: 100%;
+    }
+
+    /* Equal height for columns */
+    .align-content {
+      display: flex;
+      align-items: flex-start;
+    }
   </style>
 </head>
 <body onload="window.scrollTo(0, 0)">
@@ -29,23 +120,22 @@
         <div class="navbar-nav">
           <a class="nav-link" href="#About">About Me</a>
           <a class="nav-link" href="#Experience">Experience</a>
-          <a class="nav-link" href="#Skills">Skills</a>
           <a class="nav-link" href="#Projects">Projects</a>
+          <a class="nav-link" href="#Skills">Skills</a>
           <a class="nav-link" href="#Contact">Contact</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="container">
-    <h1><span class="auto-intro"></span>&nbsp;<span class="auto-type"></span></h1>
-    <br>
+  <!-- Banner Section with Typing Effect -->
+  <div class="banner">
+    <div class="typing-container">
+      <h1><span class="auto-intro"></span>&nbsp;<span class="auto-type"></span></h1>
+    </div>
   </div>
 
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-
-  </script>
   <script>
     var typed = new Typed (".auto-intro", {
       strings: ["My Name is Mazen Saadi and I'm a"],
@@ -60,107 +150,111 @@
         });
       }
     });
-
-    var typedIntro = new Typed(".auto-intro", options);
-
   </script>
 
-
-
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-md-4">
-      <img src="images/Profile-PNG.png" width="300" height="300" alt="Profile Image">
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8dc0e9a (about me section)
-=======
-
->>>>>>> 9b9db90 (modifying spacing)
-    <div class="col-md-8">
-      <div id="About" class="card" style="width: 100%;">
-        <div class="card-body">
-          <center><h5 class="card-title">About Me</h5></center>
-          <p class="card-text" style="text-indent: 75px;">
-            Embracing the ever-evolving landscape of technology, I’m a dedicated Computer Science student with a strong focus on cybersecurity, full-stack development, and network engineering. My curiosity drives me to continuously explore the intersection of security, efficiency, and seamless user experiences. The thrill of uncovering new challenges and crafting innovative solutions fuels my passion for these fields. Beyond the code, I’m always eager to deepen my understanding of how to protect digital spaces, build robust applications, and optimize network infrastructure. When I’m not immersed in my studies or projects, you’ll find me diving into the latest tech trends, sharpening my skills, or seeking out the next big challenge in the tech world.
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
- 
-    <div id="Experience" class="row <i class="fa fa-align-right" aria-hidden="true"></i>
-      <div class="col-md-8">
-        <div class="card" style="width: 100%;">
-          <div class="card-body">
-            <h5 class="card-title">Experience</h5>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9b9db90 (modifying spacing)
-            <li class="card-text">
-              GW ITSC Help Desk - Washington, DC
-              <ul>
-                IT Support Associate
-              </ul>
-            </li>
-<<<<<<< HEAD
-=======
-=            <p class="card-text">To Be Written.</p>
->>>>>>> 8dc0e9a (about me section)
-=======
->>>>>>> 9b9db90 (modifying spacing)
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="Skills" class="row justify-content-center mb-5">
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
+  <div class="container">
+    <div class="row align-items-start section-spacing"> <!-- Changed align-items-center to align-items-start -->
+      <div class="col-md-4">
+        <img src="images/Profile-PNG.png" width="300" height="300" alt="Profile Image">
+        
+        <!-- Skills Section Below Profile Image (left-aligned) -->
+        <div id="Skills" class="card mt-4" style="width: 100%;">
           <div class="card-body">
             <h5 class="card-title">Skills</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">To Be Written.</p>
-            
+            <ul>
+              <li>Object-Oriented Programming</li>
+              <li>High Performance Computing</li>
+              <li>Web Scraping</li>
+              <li>Data Modeling</li>
+              <li>Website Design</li>
+              <li>Languages: Python, Java, R, C, Bash, MySQL, HTML/CSS</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="Projects" class="row justify-content-center mb-5">
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Projects</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">To Be Written.</p>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="Contact" class="row justify-content-center mb-5">
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
+    
+        <!-- Contact Section Below Skills -->
+        <div id="Contact" class="card mt-4" style="width: 100%;">
           <div class="card-body">
             <h5 class="card-title">Contact</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">To Be Written.</p>
-            
+              <ul>
+                <li><a href="mailto:mazenesaadi@gmail.com">mazenesaadi@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mazenesaadi">LinkedIn</a></li>
+                <li><a href="https://github.com/mazenesaadi">GitHub</a></li>
+              </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    
+
+      <div class="col-md-8">
+        <div id="About" class="card" style="width: 100%;">
+          <div class="card-body">
+            <center><h5 class="card-title">About Me</h5></center>
+            <p class="card-text" style="text-indent: 75px;">
+              Embracing the ever-evolving landscape of technology, I’m a dedicated Computer Science student with a strong focus on cybersecurity, full-stack development, and network engineering. My curiosity drives me to continuously explore the intersection of security, efficiency, and seamless user experiences. The thrill of uncovering new challenges and crafting innovative solutions fuels my passion for these fields. Beyond the code, I’m always eager to deepen my understanding of how to protect digital spaces, build robust applications, and optimize network infrastructure. When I’m not immersed in my studies or projects, you’ll find me diving into the latest tech trends, sharpening my skills, or seeking out the next big challenge in the tech world.
+            </p>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="row align-items-center section-spacing">
+          <div class="col-md-12"> <!-- Updated to col-md-12 for full width -->
+            <div id="Projects" class="card" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Projects</h5>
+                <ul>
+                  <li><strong>Encrypted Cloud Storage and P2P Distributed File System</strong> (In Progress)
+                    <ul>
+                      <li>Developing a hybrid storage system combining cloud services and peer-to-peer (P2P) networking for secure, encrypted file storage and retrieval.</li>
+                      <li>Designed a file chunking algorithm to encrypt and distribute data across multiple nodes, ensuring privacy, availability, and fault tolerance.</li>
+                      <li>Building a user-friendly interface with secure upload and retrieval features, maintaining data encryption protocols.</li>
+                      <li>Implementing redundancy through the P2P framework to safeguard against cloud service outages.</li>
+                    </ul>
+                  </li>
+                  <li><strong>School Database Management System</strong> (Completed)
+                    <ul>
+                      <li>Led the development of a comprehensive role-based database for managing student, faculty, and course information.</li>
+                      <li>Designed SQL queries to streamline course registration, scheduling, and prerequisite checking for a seamless experience.</li>
+                      <li>Collaborated with team members to create scalable database schemas and implemented features to manage course enrollments and faculty updates.</li>
+                      <li>Ensured the system supported real-time updates and continuous access with optimized workflows for administration and users.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Experience Section -->
+        <div class="row align-items-center section-spacing">
+          <div class="col-md-12"> <!-- Updated to col-md-12 for full width -->
+            <div id="Experience" class="card" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Experience</h5>
+                <ul class="card-text">
+                  <li><strong>GW ITSC Help Desk - Washington, DC</strong> (Student Employee)
+                    <ul>
+                      <li>Provided technical support to students, faculty, and alumni, ensuring access to university resources and platforms.</li>
+                      <li>Specialized in resolving account access, data recovery, and secure handling of sensitive information.</li>
+                      <li>Utilized BMC Helix for ticket tracking and prioritized incidents, ensuring prompt issue resolution across cloud platforms like AWS and Azure.</li>
+                      <li>Assisted in optimizing the university's IT infrastructure by troubleshooting cloud-related services and promoting operational stability.</li>
+                    </ul>
+                  </li>
+                  <li><strong>GW Association of Computing Machinery - Finance Officer</strong>
+                    <ul>
+                      <li>Planned and managed university-wide coding competitions to promote student involvement in competitive programming.</li>
+                      <li>Oversaw budgeting and allocation of funds for workshops, speaker events, and other activities to enhance student learning and engagement.</li>
+                      <li>Collaborated with industry professionals to host networking events, providing valuable opportunities for students to connect with tech leaders.</li>
+                      <li>Promoted weekly meetings focused on new technologies and collaborative learning, encouraging the sharing of best practices.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
   <script>
     document.querySelectorAll('a.nav-link').forEach(anchor => {
