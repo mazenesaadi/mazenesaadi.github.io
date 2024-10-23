@@ -9,10 +9,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 
   <style>
-    /*
-     * Globals
-     */
-
     /* Custom default button */
     .btn-light,
     .btn-light:hover,
@@ -21,10 +17,6 @@
       text-shadow: none; /* Prevent inheritance from `body` */
     }
 
-    /*
-     * Base structure
-     */
-    
     body {
       background-color: whitesmoke; /* Set your desired global background color */
       color: black; /* Global black text */
@@ -33,11 +25,21 @@
     /* Apply background only to the banner */
     .banner {
       position: relative;
-      height: 100vh; /* Full screen height */
-      background: url('images/rouche.jpeg') no-repeat center center/cover; /* Replace with your image path */
+      height: 60vh; /* Adjust this value to make the banner more narrow */
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    /* Styling for the video */
+    .video-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;  /* Full viewport width */
+      height: 100%; /* Adjusts to fit the new banner height */
+      object-fit: cover; /* Ensures the video covers the entire banner area without distortion */
+      z-index: 1; /* Places the video below the text */
     }
 
     /* Overlay for the banner to make text more visible */
@@ -49,13 +51,14 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+      z-index: 2; /* Overlay above video, below text */
     }
 
-    /* Typing effect container over the image */
+    /* Typing effect container over the video */
     .typing-container {
       position: relative; /* Keeps it above the overlay */
       color: whitesmoke;
-      z-index: 2; /* Ensures it's above the overlay */
+      z-index: 3; /* Ensures it's above the overlay */
       text-align: center;
       font-size: 28px;
     }
@@ -112,24 +115,28 @@
       align-items: flex-start;
     }
   </style>
-</head>
-<body onload="window.scrollTo(0, 0)">
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarID">
-        <div class="navbar-nav">
-          <a class="nav-link" href="#About">About Me</a>
-          <a class="nav-link" href="#Experience">Experience</a>
-          <a class="nav-link" href="#Projects">Projects</a>
-          <a class="nav-link" href="#Skills">Skills</a>
-          <a class="nav-link" href="#Contact">Contact</a>
+  </head>
+  <body onload="window.scrollTo(0, 0)">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarID">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#About">About Me</a>
+            <a class="nav-link" href="#Experience">Experience</a>
+            <a class="nav-link" href="#Projects">Projects</a>
+            <a class="nav-link" href="#Skills">Skills</a>
+            <a class="nav-link" href="#Contact">Contact</a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Banner Section with Typing Effect -->
+  <!-- Banner Section with Typing Effect and Video -->
   <div class="banner">
+    <video autoplay muted loop class="video-banner">
+      <source src="images/dcflyoverfinal.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="typing-container">
       <h1><span class="auto-intro"></span>&nbsp;<span class="auto-type"></span></h1>
     </div>
@@ -152,66 +159,68 @@
     });
   </script>
 
-  <div class="container">
+<div class="container">
 <div class="row align-items-start section-spacing"> <!-- Changed align-items-center to align-items-start -->
-  <div class="col-md-4">
-    <img src="images/Profile-PNG.png" width="300" height="300" alt="Profile Image">
+<div class="col-md-4">
+<img src="images/Profile-PNG.png" width="300" height="300" alt="Profile Image">
     
-    <!-- Skills Section Below Profile Image (left-aligned) -->
-    <div id="Skills" class="card mt-4" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">Skills</h5>
-        <ul>
-          <li>Object-Oriented Programming</li>
-          <li>High Performance Computing</li>
-          <li>Web Scraping</li>
-          <li>Data Modeling</li>
-          <li>Website Design</li>
-          <li>Languages: Python, Java, R, C, Bash, MySQL, HTML/CSS</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Contact Section Below Skills -->
-    <div id="Contact" class="card mt-4" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">Contact</h5>
-          <ul>
-            <li><a href="mailto:mazenesaadi@gmail.com">mazenesaadi@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/mazenesaadi">LinkedIn</a></li>
-            <li><a href="https://github.com/mazenesaadi">GitHub</a></li>
-          </ul>
-      </div>
+  <!-- Skills Section Below Profile Image (left-aligned) -->
+  <div id="Skills" class="card mt-4" style="width: 100%;">
+    <div class="card-body">
+      <h5 class="card-title">Skills</h5>
+      <ul>
+        <li>Object-Oriented Programming</li>
+        <li>High Performance Computing</li>
+        <li>Web Scraping</li>
+        <li>Data Modeling</li>
+        <li>Website Design</li>
+        <li>Languages: Python, Java, R, C, Bash, MySQL, HTML/CSS</li>
+      </ul>
     </div>
   </div>
+
+<!-- Contact Section Below Skills -->
+<div id="Contact" class="card mt-4" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title">Contact</h5>
+      <ul>
+        <li><a href="mailto:mazenesaadi@gmail.com">mazenesaadi@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/mazenesaadi">LinkedIn</a></li>
+        <li><a href="https://github.com/mazenesaadi">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <!-- About Section -->
 <div class="col-md-8">
   <div id="About" class="card" style="margin-top: 50px;">
     <div class="card-body">
       <center><h5 class="card-title">About Me</h5></center>
-      <p class="card-text" style="text-indent: 75px;">
+        <p class="card-text" style="text-indent: 75px;">
         Embracing the ever-evolving landscape of technology, I’m a dedicated Computer Science student with a strong focus on cybersecurity, full-stack development, and network engineering. My curiosity drives me to continuously explore the intersection of security, efficiency, and seamless user experiences. The thrill of uncovering new challenges and crafting innovative solutions fuels my passion for these fields. Beyond the code, I’m always eager to deepen my understanding of how to protect digital spaces, build robust applications, and optimize network infrastructure. When I’m not immersed in my studies or projects, you’ll find me diving into the latest tech trends, sharpening my skills, or seeking out the next big challenge in the tech world.
-      </p>
-    </div>
+    </p>
   </div>
+</div>
+
 
 <!-- Projects Section -->
 <div class="row align-items-center section-spacing" style="margin-top: 50px;"> <!-- Added margin-top -->
-  <div class="col-md-12"> <!-- Updated to col-md-12 for full width -->
+  <div class="col-md-12"> 
     <div id="Projects" class="card" style="width: 100%;">
       <div class="card-body">
         <h5 class="card-title">Projects</h5>
-        <ul>
-          <li><strong>Encrypted Cloud Storage and P2P Distributed File System</strong> (In Progress)
-            <ul>
-              <li>Developing a hybrid storage system combining cloud services and peer-to-peer (P2P) networking for secure, encrypted file storage and retrieval.</li>
-              <li>Designed a file chunking algorithm to encrypt and distribute data across multiple nodes, ensuring privacy, availability, and fault tolerance.</li>
-              <li>Building a user-friendly interface with secure upload and retrieval features, maintaining data encryption protocols.</li>
-              <li>Implementing redundancy through the P2P framework to safeguard against cloud service outages.</li>
-            </ul>
-          </li>
-          <li><strong>School Database Management System</strong> (Completed)
+          <ul>
+            <li><strong>Encrypted Cloud Storage and P2P Distributed File System</strong> (In Progress)
+              <ul>
+                <li>Developing a hybrid storage system combining cloud services and peer-to-peer (P2P) networking for secure, encrypted file storage and retrieval.</li>
+                <li>Designed a file chunking algorithm to encrypt and distribute data across multiple nodes, ensuring privacy, availability, and fault tolerance.</li>
+                <li>Building a user-friendly interface with secure upload and retrieval features, maintaining data encryption protocols.</li>
+                <li>Implementing redundancy through the P2P framework to safeguard against cloud service outages.</li>
+              </ul>
+            </li>
+          
+            <li><strong>School Database Management System</strong> (Completed)
             <ul>
               <li>Led the development of a comprehensive role-based database for managing student, faculty, and course information.</li>
               <li>Designed SQL queries to streamline course registration, scheduling, and prerequisite checking for a seamless experience.</li>
@@ -227,45 +236,45 @@
 
         
 
-        <!-- Experience Section -->
-        <div class="row align-items-center section-spacing">
-          <div class="col-md-12"> <!-- Updated to col-md-12 for full width -->
-            <div id="Experience" class="card" style="width: 100%;">
-              <div class="card-body">
-                <h5 class="card-title">Experience</h5>
-                <ul class="card-text">
-                  <li><strong>GW ITSC Help Desk - Washington, DC</strong> (Student Employee)
-                    <ul>
-                      <li>Provided technical support to students, faculty, and alumni, ensuring access to university resources and platforms.</li>
-                      <li>Specialized in resolving account access, data recovery, and secure handling of sensitive information.</li>
-                      <li>Utilized BMC Helix for ticket tracking and prioritized incidents, ensuring prompt issue resolution across cloud platforms like AWS and Azure.</li>
-                      <li>Assisted in optimizing the university's IT infrastructure by troubleshooting cloud-related services and promoting operational stability.</li>
-                    </ul>
-                  </li>
-                  <li><strong>GW Association of Computing Machinery - Finance Officer</strong>
-                    <ul>
-                      <li>Planned and managed university-wide coding competitions to promote student involvement in competitive programming.</li>
-                      <li>Oversaw budgeting and allocation of funds for workshops, speaker events, and other activities to enhance student learning and engagement.</li>
-                      <li>Collaborated with industry professionals to host networking events, providing valuable opportunities for students to connect with tech leaders.</li>
-                      <li>Promoted weekly meetings focused on new technologies and collaborative learning, encouraging the sharing of best practices.</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Experience Section -->
+<div class="row align-items-center section-spacing">
+  <div class="col-md-12"> 
+    <div id="Experience" class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Experience</h5>
+          <ul class="card-text">
+            <li><strong>GW ITSC Help Desk - Washington, DC</strong> (Student Employee)
+              <ul>
+                <li>Provided technical support to students, faculty, and alumni, ensuring access to university resources and platforms.</li>
+                <li>Specialized in resolving account access, data recovery, and secure handling of sensitive information.</li>
+                <li>Utilized BMC Helix for ticket tracking and prioritized incidents, ensuring prompt issue resolution across cloud platforms like AWS and Azure.</li>
+                <li>Assisted in optimizing the university's IT infrastructure by troubleshooting cloud-related services and promoting operational stability.</li>
+              </ul>
+            </li>
+            
+            <li><strong>GW Association of Computing Machinery - Finance Officer</strong>
+              <ul>
+                <li>Planned and managed university-wide coding competitions to promote student involvement in competitive programming.</li>
+                <li>Oversaw budgeting and allocation of funds for workshops, speaker events, and other activities to enhance student learning and engagement.</li>
+                <li>Collaborated with industry professionals to host networking events, providing valuable opportunities for students to connect with tech leaders.</li>
+                <li>Promoted weekly meetings focused on new technologies and collaborative learning, encouraging the sharing of best practices.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
         
-
-  <script>
-    document.querySelectorAll('a.nav-link').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+<script>
+  document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
