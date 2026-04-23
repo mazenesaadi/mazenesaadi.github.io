@@ -3,278 +3,301 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mazen's Portfolio</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <title>Mazen Saadi — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-  <style>
-    /* Custom default button */
-    .btn-light,
-    .btn-light:hover,
-    .btn-light:focus {
-      color: #333;
-      text-shadow: none; /* Prevent inheritance from `body` */
-    }
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">MS</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    body {
-      background-color: whitesmoke; /* Set your desired global background color */
-      color: black; /* Global black text */
-    }
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="images/dcflyoverfinal.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Mazen Saadi</h1>
+      <div class="hero-role">
+        <span>a </span><span class="auto-type"></span>
+      </div>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">Learn More</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
 
-    /* Apply background only to the banner */
-    .banner {
-      position: relative;
-      height: 60vh; /* Adjust this value to make the banner more narrow */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  <main>
 
-    /* Styling for the video */
-    .video-banner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;  /* Full viewport width */
-      height: 100%; /* Adjusts to fit the new banner height */
-      object-fit: cover; /* Ensures the video covers the entire banner area without distortion */
-      z-index: 1; /* Places the video below the text */
-    }
-
-    /* Overlay for the banner to make text more visible */
-    .banner::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
-      z-index: 2; /* Overlay above video, below text */
-    }
-
-    /* Typing effect container over the video */
-    .typing-container {
-      position: relative; /* Keeps it above the overlay */
-      color: whitesmoke;
-      z-index: 3; /* Ensures it's above the overlay */
-      text-align: center;
-      font-size: 28px;
-    }
-
-    /* Custom h1 for banner */
-    .typing-container h1 {
-      margin: 0;
-      font-size: 48px;
-    }
-
-    /* Container class without overriding global background */
-    .container, .row {
-      background-color: transparent; /* Inherit from body */
-      color: black; /* Ensures text remains black */
-    }
-
-    p { 
-      text-indent: 50%;
-    }
-
-    /* Header links */
-    .nav-masthead .nav-link {
-      color: rgba(255, 255, 255, .5);
-      border-bottom: .25rem solid transparent;
-    }
-
-    .nav-masthead .nav-link:hover,
-    .nav-masthead .nav-link:focus {
-      border-bottom-color: rgba(255, 255, 255, .25);
-    }
-
-    .nav-masthead .nav-link + .nav-link {
-      margin-left: 1rem;
-    }
-
-    .nav-masthead .active {
-      color: #fff;
-      border-bottom-color: #fff;
-    }
-
-    /* Add spacing between sections */
-    .section-spacing {
-      margin-bottom: 50px; /* Adjust this value to change the space between sections */
-    }
-
-    /* Adjust card width to match full container */
-    .card {
-      width: 100%;
-    }
-
-    /* Equal height for columns */
-    .align-content {
-      display: flex;
-      align-items: flex-start;
-    }
-  </style>
-  </head>
-  <body onload="window.scrollTo(0, 0)">
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarID">
-          <div class="navbar-nav">
-            <a class="nav-link" href="#About">About Me</a>
-            <a class="nav-link" href="#Experience">Experience</a>
-            <a class="nav-link" href="#Projects">Projects</a>
-            <a class="nav-link" href="#Skills">Skills</a>
-            <a class="nav-link" href="#Contact">Contact</a>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-container">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-grid fade-in">
+          <div class="about-image">
+            <img src="images/portfolio_pic.png" alt="Mazen Saadi">
+          </div>
+          <div class="about-text">
+            <p>I'm a <strong>Computer Science graduate</strong> from The George Washington University with hands-on experience in cybersecurity and IT operations across enterprise environments. I hold <strong>CompTIA Security+</strong> and <strong>Splunk Core Certified User</strong> certifications and am actively pursuing junior cybersecurity roles.</p>
+            <p>My background spans <strong>endpoint security</strong>, <strong>identity and access management</strong>, and <strong>security monitoring</strong> — work I've applied at organizations including the World Bank Group and Afiniti. I'm drawn to the challenge of protecting systems, investigating threats, and building secure infrastructure from the ground up.</p>
+            <p>Outside of work, I stay sharp by following the latest developments in the security space, working on personal projects, and continuously building on my technical skill set.</p>
+            <div class="about-links">
+              <a href="https://github.com/mazenesaadi" target="_blank" rel="noopener" class="icon-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/mazenesaadi" target="_blank" rel="noopener" class="icon-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="mailto:mazenesaadi@gmail.com" class="icon-link">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
+    </section>
 
-  <!-- Banner Section with Typing Effect and Video -->
-  <div class="banner">
-    <video autoplay muted loop class="video-banner">
-      <source src="images/dcflyoverfinal.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="typing-container">
-      <h1><span class="auto-intro"></span>&nbsp;<span class="auto-type"></span></h1>
-    </div>
-  </div>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+      <div class="section-container">
+        <h2 class="section-title fade-in">Skills</h2>
+        <div class="skills-grid fade-in">
+          <div class="skill-category">
+            <h3>Specializations</h3>
+            <div class="skill-tags">
+              <span class="tag">SIEM (Splunk)</span>
+              <span class="tag">Endpoint Security &amp; Compliance</span>
+              <span class="tag">Identity &amp; Access Management</span>
+              <span class="tag">Secure Device Provisioning</span>
+              <span class="tag">Threat Monitoring</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">C</span>
+              <span class="tag">Go</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools &amp; Platforms</h3>
+            <div class="skill-tags">
+              <span class="tag">Sophos Central</span>
+              <span class="tag">Splunk</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Git/GitHub</span>
+              <span class="tag">Linux/Bash</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">ServiceNow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-container">
+        <h2 class="section-title fade-in">Experience</h2>
+        <div class="timeline fade-in">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>World Bank Group</h3>
+                <span class="timeline-tag">IT Technician · Contract</span>
+              </div>
+              <p class="timeline-location">
+                <i class="fas fa-map-marker-alt"></i> Washington, DC &nbsp;·&nbsp;
+                <i class="fas fa-calendar-alt"></i> Dec 2025 – Present
+              </p>
+              <ul>
+                <li>Provision and secure enterprise Windows endpoints in accordance with organizational security baselines, provisioning standards, and compliance requirements.</li>
+                <li>Perform quality assurance checks including encryption status, application configuration, identity setup, and deployment readiness prior to Day-1 handoff.</li>
+                <li>Maintain accurate asset inventories and lifecycle records across enterprise systems, supporting audit readiness, compliance tracking, and device lifecycle governance.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Afiniti</h3>
+                <span class="timeline-tag">IT Support Specialist</span>
+              </div>
+              <p class="timeline-location">
+                <i class="fas fa-map-marker-alt"></i> Washington, DC &nbsp;·&nbsp;
+                <i class="fas fa-calendar-alt"></i> Feb 2025 – Aug 2025
+              </p>
+              <ul>
+                <li>Enforced endpoint security policies using Sophos Central, including full-disk encryption (BitLocker), device control, application restrictions, and tamper protection.</li>
+                <li>Deployed and configured laptops with secure baselines, managing onboarding and offboarding workflows with least-privilege access and compliance enforcement.</li>
+                <li>Investigated and triaged security alerts related to malware, policy violations, and encryption failures, coordinating remediation and documenting incident outcomes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>GW ITSC Help Desk</h3>
+                <span class="timeline-tag">Student Technical Support Assistant</span>
+              </div>
+              <p class="timeline-location">
+                <i class="fas fa-map-marker-alt"></i> Washington, DC &nbsp;·&nbsp;
+                <i class="fas fa-calendar-alt"></i> Sep 2022 – Feb 2025
+              </p>
+              <ul>
+                <li>Supported identity and access management operations, resolving account access issues and password resets in accordance with institutional security policies.</li>
+                <li>Handled sensitive student data and security-related incidents, maintaining audit trails in BMC Helix and escalating phishing reports, suspicious logins, and misconfigurations to senior IT staff.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section section-alt">
+      <div class="section-container">
+        <h2 class="section-title fade-in">Certifications</h2>
+        <div class="cert-grid fade-in">
+
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <div class="cert-info">
+              <h3>CompTIA Security+</h3>
+              <p class="cert-meta">SY0-701 &nbsp;·&nbsp; CompTIA</p>
+              <span class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 2025</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="cert-info">
+              <h3>Splunk Core Certified User</h3>
+              <p class="cert-meta">Splunk</p>
+              <span class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2025</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-container">
+        <h2 class="section-title fade-in">Projects</h2>
+        <div class="projects-grid fade-in">
+
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fas fa-lock project-icon"></i>
+              <span class="project-status completed">Completed</span>
+            </div>
+            <h3>Encrypted Cloud Storage &amp; P2P Distributed File System</h3>
+            <p class="project-date"><i class="fas fa-calendar-alt"></i> Aug 2024 – Apr 2025</p>
+            <ul class="project-details">
+              <li>Developed a secure distributed file storage system combining cloud services and peer-to-peer networking, implementing encryption and data chunking to ensure confidentiality and redundancy.</li>
+              <li>Implemented encryption, decryption, and file reconstruction workflows with an emphasis on data integrity, resilience against outages, and protection against unauthorized access across storage nodes.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Cryptography</span>
+              <span class="tag">P2P</span>
+              <span class="tag">Cloud</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fas fa-database project-icon"></i>
+              <span class="project-status completed">Completed</span>
+            </div>
+            <h3>School Database Management System</h3>
+            <p class="project-date"><i class="fas fa-calendar-alt"></i> Apr 2023 – May 2023</p>
+            <ul class="project-details">
+              <li>Built a relational database system supporting role-based access for students, faculty, and administrators, including course registration and prerequisite enforcement.</li>
+              <li>Contributed to ER diagram design and SQL implementation, supporting user lifecycle transitions and integrated support functionality.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">MySQL</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Database Design</span>
+              <span class="tag">Role-Based Access</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="section-container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <p class="contact-intro fade-in">I'm actively looking for junior cybersecurity opportunities. Whether you have a role in mind or just want to connect, feel free to reach out.</p>
+        <div class="contact-links fade-in">
+          <a href="mailto:mazenesaadi@gmail.com" class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <span>mazenesaadi@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mazenesaadi" target="_blank" rel="noopener" class="contact-card">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/mazenesaadi" target="_blank" rel="noopener" class="contact-card">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed &amp; Built by Mazen Saadi &copy; 2025</p>
+  </footer>
 
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed (".auto-intro", {
-      strings: ["My Name is Mazen Saadi and I'm a"],
-      typeSpeed: 75,
-      showCursor: false,
-      onComplete: function() { 
-        var typed = new Typed(".auto-type", {
-          strings: ["Developer.", "Problem-Solver.", "Lifelong Learner.", "Communicator.", "Innovator.", "Team Player.", "Strategist.", "Critical Thinker.", "Leader.", "Tech Enthusiast.", "Collaborator.", "Programmer."],
-          typeSpeed: 75,
-          backSpeed: 165,
-          loop: true
-        });
-      }
-    });
-  </script>
-
-<div class="container">
-<div class="row align-items-start section-spacing"> <!-- Changed align-items-center to align-items-start -->
-<div class="col-md-4">
-<img src="images/Profile-PNG.png" width="300" height="300" alt="Profile Image">
-    
-  <!-- Skills Section Below Profile Image (left-aligned) -->
-  <div id="Skills" class="card mt-4" style="width: 100%;">
-    <div class="card-body">
-      <h5 class="card-title">Skills</h5>
-      <ul>
-        <li>Object-Oriented Programming</li>
-        <li>High Performance Computing</li>
-        <li>Web Scraping</li>
-        <li>Data Modeling</li>
-        <li>Website Design</li>
-        <li>Languages: Python, Java, R, C, Bash, MySQL, HTML/CSS</li>
-      </ul>
-    </div>
-  </div>
-
-<!-- Contact Section Below Skills -->
-<div id="Contact" class="card mt-4" style="width: 100%;">
-  <div class="card-body">
-    <h5 class="card-title">Contact</h5>
-      <ul>
-        <li><a href="mailto:mazenesaadi@gmail.com">mazenesaadi@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/mazenesaadi">LinkedIn</a></li>
-        <li><a href="https://github.com/mazenesaadi">GitHub</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- About Section -->
-<div class="col-md-8">
-  <div id="About" class="card" style="margin-top: 50px;">
-    <div class="card-body">
-      <center><h5 class="card-title">About Me</h5></center>
-        <p class="card-text" style="text-indent: 75px;">
-        Embracing the ever-evolving landscape of technology, I’m a dedicated Computer Science student with a strong focus on cybersecurity, full-stack development, and network engineering. My curiosity drives me to continuously explore the intersection of security, efficiency, and seamless user experiences. The thrill of uncovering new challenges and crafting innovative solutions fuels my passion for these fields. Beyond the code, I’m always eager to deepen my understanding of how to protect digital spaces, build robust applications, and optimize network infrastructure. When I’m not immersed in my studies or projects, you’ll find me diving into the latest tech trends, sharpening my skills, or seeking out the next big challenge in the tech world.
-    </p>
-  </div>
-</div>
-
-
-<!-- Projects Section -->
-<div class="row align-items-center section-spacing" style="margin-top: 50px;"> <!-- Added margin-top -->
-  <div class="col-md-12"> 
-    <div id="Projects" class="card" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">Projects</h5>
-          <ul>
-            <li><strong>Encrypted Cloud Storage and P2P Distributed File System</strong> (In Progress)
-              <ul>
-                <li>Developing a hybrid storage system combining cloud services and peer-to-peer (P2P) networking for secure, encrypted file storage and retrieval.</li>
-                <li>Designed a file chunking algorithm to encrypt and distribute data across multiple nodes, ensuring privacy, availability, and fault tolerance.</li>
-                <li>Building a user-friendly interface with secure upload and retrieval features, maintaining data encryption protocols.</li>
-                <li>Implementing redundancy through the P2P framework to safeguard against cloud service outages.</li>
-              </ul>
-            </li>
-          
-            <li><strong>School Database Management System</strong> (Completed)
-            <ul>
-              <li>Led the development of a comprehensive role-based database for managing student, faculty, and course information.</li>
-              <li>Designed SQL queries to streamline course registration, scheduling, and prerequisite checking for a seamless experience.</li>
-              <li>Collaborated with team members to create scalable database schemas and implemented features to manage course enrollments and faculty updates.</li>
-              <li>Ensured the system supported real-time updates and continuous access with optimized workflows for administration and users.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-        
-
-<!-- Experience Section -->
-<div class="row align-items-center section-spacing">
-  <div class="col-md-12"> 
-    <div id="Experience" class="card" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">Experience</h5>
-          <ul class="card-text">
-            <li><strong>GW ITSC Help Desk - Washington, DC</strong> (Student Employee)
-              <ul>
-                <li>Provided technical support to students, faculty, and alumni, ensuring access to university resources and platforms.</li>
-                <li>Specialized in resolving account access, data recovery, and secure handling of sensitive information.</li>
-                <li>Utilized BMC Helix for ticket tracking and prioritized incidents, ensuring prompt issue resolution across cloud platforms like AWS and Azure.</li>
-                <li>Assisted in optimizing the university's IT infrastructure by troubleshooting cloud-related services and promoting operational stability.</li>
-              </ul>
-            </li>
-            
-            <li><strong>GW Association of Computing Machinery - Finance Officer</strong>
-              <ul>
-                <li>Planned and managed university-wide coding competitions to promote student involvement in competitive programming.</li>
-                <li>Oversaw budgeting and allocation of funds for workshops, speaker events, and other activities to enhance student learning and engagement.</li>
-                <li>Collaborated with industry professionals to host networking events, providing valuable opportunities for students to connect with tech leaders.</li>
-                <li>Promoted weekly meetings focused on new technologies and collaborative learning, encouraging the sharing of best practices.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-        
-<script>
-  document.querySelectorAll('a.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
