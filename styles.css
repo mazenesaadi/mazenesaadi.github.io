@@ -64,6 +64,11 @@ body {
   font-family: 'Fira Code', monospace;
   font-size: 1.4rem;
   font-weight: 700;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navbar.scrolled .nav-logo {
   color: var(--accent);
 }
 
@@ -74,13 +79,20 @@ body {
 }
 
 .nav-links a {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   position: relative;
   transition: color 0.2s;
-  text-shadow: none;
+}
+
+.navbar.scrolled .nav-links a {
+  color: var(--text-secondary);
+}
+
+.navbar.scrolled .nav-links a:hover {
+  color: var(--text-primary);
 }
 
 .nav-links a::after {
