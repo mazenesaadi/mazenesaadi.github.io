@@ -5,11 +5,11 @@ const typeTarget = document.querySelector(".auto-type");
 if (typeTarget && window.Typed) {
   new Typed(".auto-type", {
     strings: [
-      "Cybersecurity Engineering Student.",
+      "Computer Science Graduate.",
+      "M.S. Cyber Security Engineering Student.",
       "IT Analyst.",
       "Security+ Certified.",
-      "Splunk Core Certified User.",
-      "Endpoint Security Practitioner."
+      "Developer."
     ],
     typeSpeed: 70,
     backSpeed: 45,
