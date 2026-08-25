@@ -2,8 +2,8 @@
   --bg-primary: #f5f7fa;
   --bg-secondary: #eaeff6;
   --bg-card: #ffffff;
-  --accent: #4f46e5;
-  --accent-alt: #0891b2;
+  --accent: #0f766e;
+  --accent-alt: #b45309;
   --text-primary: #111827;
   --text-secondary: #4b5563;
   --text-muted: #9ca3af;
@@ -136,7 +136,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13,17,23,0.88) 0%, rgba(108,99,255,0.18) 100%);
+  background: linear-gradient(135deg, rgba(13,17,23,0.88) 0%, rgba(15,118,110,0.22) 100%);
   z-index: 1;
 }
 
@@ -150,7 +150,7 @@ body {
 .hero-greeting {
   font-family: 'Fira Code', monospace;
   font-size: 1.15rem;
-  color: #7dd3fc;
+  color: #8ee8dc;
   margin-bottom: 0.5rem;
   opacity: 0;
   animation: fadeInUp 0.6s ease 0.2s forwards;
@@ -175,7 +175,7 @@ body {
 }
 
 .auto-type {
-  color: #a5b4fc;
+  color: #8ee8dc;
   font-weight: 600;
 }
 
@@ -201,7 +201,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(108,99,255,0.4);
+  box-shadow: 0 8px 25px rgba(15,118,110,0.34);
 }
 
 .btn-secondary {
@@ -216,7 +216,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(108,99,255,0.1);
+  background: rgba(15,118,110,0.1);
   transform: translateY(-2px);
 }
 
@@ -277,10 +277,10 @@ body {
   width: 240px;
   height: 240px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 8px;
   border: 3px solid var(--accent);
   display: block;
-  box-shadow: 0 8px 30px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 8px 30px rgba(15, 118, 110, 0.15);
 }
 
 .about-text p {
@@ -317,7 +317,7 @@ body {
 
 .icon-link:hover {
   border-color: var(--accent);
-  background: rgba(108,99,255,0.08);
+  background: rgba(15,118,110,0.08);
 }
 
 /* ── SKILLS ───────────────────────────────── */
@@ -344,8 +344,8 @@ body {
 
 .tag {
   padding: 0.35rem 0.85rem;
-  background: rgba(108,99,255,0.1);
-  border: 1px solid rgba(108,99,255,0.28);
+  background: rgba(15,118,110,0.1);
+  border: 1px solid rgba(15,118,110,0.28);
   color: var(--accent);
   border-radius: 20px;
   font-size: 0.82rem;
@@ -356,7 +356,7 @@ body {
 }
 
 .tag:hover {
-  background: rgba(108,99,255,0.2);
+  background: rgba(15,118,110,0.2);
   border-color: var(--accent);
 }
 
@@ -373,7 +373,7 @@ body {
   gap: 1.25rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem 1.75rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -382,7 +382,7 @@ body {
 .cert-card:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.12);
 }
 
 .cert-icon {
@@ -441,13 +441,13 @@ body {
   height: 12px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(108,99,255,0.2);
+  box-shadow: 0 0 0 4px rgba(15,118,110,0.2);
 }
 
 .timeline-content {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem 1.75rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -456,7 +456,7 @@ body {
 .timeline-content:hover {
   border-color: var(--accent);
   transform: translateX(4px);
-  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.12);
+  box-shadow: 0 4px 16px rgba(15, 118, 110, 0.12);
 }
 
 .timeline-header {
@@ -475,9 +475,9 @@ body {
 .timeline-tag {
   font-size: 0.78rem;
   padding: 0.2rem 0.7rem;
-  background: rgba(0,212,255,0.1);
+  background: rgba(180,83,9,0.1);
   color: var(--accent-alt);
-  border: 1px solid rgba(0,212,255,0.28);
+  border: 1px solid rgba(180,83,9,0.28);
   border-radius: 20px;
   font-weight: 500;
 }
@@ -512,7 +512,7 @@ body {
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -524,7 +524,7 @@ body {
 .project-card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.12);
 }
 
 .project-header {
@@ -621,7 +621,7 @@ body {
   padding: 1rem 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
@@ -636,9 +636,9 @@ body {
 
 .contact-card:hover {
   border-color: var(--accent);
-  background: rgba(79, 70, 229, 0.04);
+  background: rgba(15, 118, 110, 0.04);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.12);
+  box-shadow: 0 6px 20px rgba(15, 118, 110, 0.12);
 }
 
 /* ── FOOTER ───────────────────────────────── */

@@ -1,40 +1,44 @@
 /* global Typed */
 
-// Typed.js — role cycling in hero
-var typed = new Typed(".auto-type", {
-  strings: [
-    "Cybersecurity Analyst.",
-    "Problem Solver.",
-    "Security+ Certified.",
-    "Threat Hunter.",
-    "Developer.",
-    "Lifelong Learner.",
-    "Tech Enthusiast.",
-  ],
-  typeSpeed: 75,
-  backSpeed: 55,
-  backDelay: 1500,
-  loop: true,
-});
+const typeTarget = document.querySelector(".auto-type");
 
-// Navbar darkens after scrolling past hero
+if (typeTarget && window.Typed) {
+  new Typed(".auto-type", {
+    strings: [
+      "Cybersecurity Engineering Student.",
+      "IT Analyst.",
+      "Security+ Certified.",
+      "Splunk Core Certified User.",
+      "Endpoint Security Practitioner."
+    ],
+    typeSpeed: 70,
+    backSpeed: 45,
+    backDelay: 1500,
+    loop: true
+  });
+} else if (typeTarget) {
+  typeTarget.textContent = "IT Analyst.";
+}
+
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => {
-  navbar.classList.toggle("scrolled", window.scrollY > 60);
-});
 
-// Smooth scroll for all anchor links
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 60);
+  });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function (event) {
     const target = document.querySelector(this.getAttribute("href"));
+
     if (target) {
-      e.preventDefault();
+      event.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
 
-// Scroll-triggered fade-in for sections
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -47,4 +51,4 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
