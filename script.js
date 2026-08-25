@@ -5,18 +5,22 @@ const typeTarget = document.querySelector(".auto-type");
 if (typeTarget && window.Typed) {
   new Typed(".auto-type", {
     strings: [
-      "Cybersecurity Graduate Student.",
-      "Cybersecurity Professional.",
-      "Computer Scientist.",
-      "IT Professional.",
-      "Security-Minded Technologist.",
-      "Technical Problem Solver.",
-      "Secure Systems Builder.",
-      "Python Developer.",
-      "Systems Thinker.",
-      "Endpoint Security Practitioner.",
-      "Security+ Certified Professional.",
-      "Continuous Learner."
+      "a cybersecurity graduate student.",
+      "a computer scientist.",
+      "an IT professional.",
+      "a cybersecurity professional.",
+      "a security-minded technologist.",
+      "a technical problem solver.",
+      "a secure systems builder.",
+      "a Python developer.",
+      "a backend developer.",
+      "a security analyst.",
+      "a systems thinker.",
+      "a cloud security enthusiast.",
+      "a network security enthusiast.",
+      "an endpoint security practitioner.",
+      "a Security+ certified professional.",
+      "a continuous learner."
     ],
     typeSpeed: 70,
     backSpeed: 45,
@@ -24,7 +28,7 @@ if (typeTarget && window.Typed) {
     loop: true
   });
 } else if (typeTarget) {
-  typeTarget.textContent = "Cybersecurity Graduate Student.";
+  typeTarget.textContent = "a cybersecurity graduate student.";
 }
 
 const navbar = document.getElementById("navbar");
