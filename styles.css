@@ -412,13 +412,6 @@ body {
   gap: 0.4rem;
 }
 
-.course-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.9rem;
-}
-
 /* ── TIMELINE (Experience) ────────────────── */
 .timeline {
   position: relative;
@@ -585,6 +578,27 @@ body {
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+.project-summary {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-link:hover,
+.project-link:focus {
+  text-decoration: underline;
 }
 
 .project-details {

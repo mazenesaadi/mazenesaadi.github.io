@@ -119,6 +119,15 @@
               <span class="tag">Microsoft 365</span>
             </div>
           </div>
+          <div class="skill-category">
+            <h3>Graduate Coursework</h3>
+            <div class="skill-tags">
+              <span class="tag">Cyber Security Systems Engineering</span>
+              <span class="tag">Advanced Network Security Lab</span>
+              <span class="tag">AI Methods for Cybersecurity</span>
+              <span class="tag">Quantitative Systems Engineering</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -135,12 +144,6 @@
               <h3>George Mason University</h3>
               <p class="cert-meta">M.S. in Cyber Security Engineering</p>
               <span class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 2026 - Expected May 2028</span>
-              <div class="course-tags" aria-label="Current graduate coursework keywords">
-                <span class="tag">Cyber Security Systems Engineering</span>
-                <span class="tag">Advanced Network Security Lab</span>
-                <span class="tag">AI Methods for Cybersecurity</span>
-                <span class="tag">Quantitative Systems Engineering</span>
-              </div>
             </div>
           </div>
 
@@ -178,6 +181,8 @@
                 <li>Completed 1,000+ ServiceNow requests involving imaging, quality assurance, provisioning, and deployment of enterprise Windows laptops.</li>
                 <li>Diagnosed operating-system, hardware, driver, application, enrollment, and imaging failures that prevented devices from meeting standardized deployment requirements.</li>
                 <li>Validated BitLocker encryption, identity configuration, required applications, and deployment readiness while coordinating provisioning exceptions with security and infrastructure teams.</li>
+                <li>Monitored provisioning queues, prioritized requests around service levels and user start dates, and supported Day-1 handoffs for incoming personnel.</li>
+                <li>Maintained asset and assignment records by scanning received and deployed equipment, reconciling inventory, and documenting remediation findings.</li>
               </ul>
             </div>
           </div>
@@ -197,6 +202,8 @@
                 <li>Served as Afiniti's primary onsite IT support resource, troubleshooting hardware, software, identity, network, and endpoint issues across Windows and macOS.</li>
                 <li>Hardened endpoints through Sophos Central by enforcing BitLocker encryption, device-control restrictions, application policies, tamper protection, and other security requirements.</li>
                 <li>Triaged endpoint-security events involving malware detections, policy violations, encryption failures, and noncompliant devices; performed initial remediation and escalated suspected incidents.</li>
+                <li>Configured and supported laptops, docking stations, printers, mobile devices, Webex equipment, VPN access, Wi-Fi, Ethernet, Outlook, and peripheral issues for onsite and remote users.</li>
+                <li>Managed onboarding and offboarding workflows, including device preparation, account-access coordination, equipment recovery, data protection, and returned-asset reassignment.</li>
               </ul>
             </div>
           </div>
@@ -215,6 +222,8 @@
               <ul>
                 <li>Resolved identity and access incidents involving account lockouts, MFA failures, permission errors, and account-configuration issues while following institutional security procedures.</li>
                 <li>Triaged phishing reports, suspicious login activity, potential account compromises, and security-related misconfigurations, escalating incidents to security and infrastructure teams.</li>
+                <li>Used BMC Helix to document incidents, troubleshooting steps, user communication, escalation activity, and final resolution details.</li>
+                <li>Supported students, faculty, alumni, and staff with account access, data recovery, university platforms, and secure handling of sensitive information.</li>
               </ul>
             </div>
           </div>
@@ -266,10 +275,12 @@
             </div>
             <h3>Encrypted Cloud Storage &amp; P2P Distributed File System</h3>
             <p class="project-date"><i class="fas fa-calendar-alt"></i> Aug 2024 - Apr 2025</p>
+            <p class="project-summary">A Python-based file distribution system that stores encrypted chunks across registered LAN peers. <a href="https://github.com/mazenesaadi/pShare" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View GitHub repository</a></p>
             <ul class="project-details">
               <li>Designed and developed a distributed file-storage platform combining cloud storage and peer-to-peer nodes to provide confidentiality, redundancy, and recovery from individual node failures.</li>
               <li>Implemented AES-GCM encryption, password-derived key handling, file chunking, integrity validation, and secure reconstruction to protect stored data from unauthorized access or modification.</li>
               <li>Developed Python-based node discovery and communication using Zeroconf and gRPC, including registration, heartbeat monitoring, storage tracking, and recovery of unavailable file chunks.</li>
+              <li>Focused on reliability by tracking node availability, distributing file pieces across peers, and reconstructing files only after validating chunk integrity.</li>
             </ul>
             <div class="project-tags">
               <span class="tag">Python</span>
@@ -287,10 +298,12 @@
             </div>
             <h3>xv6 Operating System Extensions</h3>
             <p class="project-date"><i class="fas fa-calendar-alt"></i> Aug 2024 - Jan 2025</p>
+            <p class="project-summary">A systems programming project extending the xv6 RISC-V kernel with process-priority controls. <a href="https://github.com/mazenesaadi/xv6-os-extensions" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View GitHub repository</a></p>
             <ul class="project-details">
               <li>Modified the xv6 RISC-V operating-system kernel in C to implement priority-based CPU scheduling and a prio_set system call for dynamic process-priority management.</li>
               <li>Developed priority-aging logic to improve scheduling fairness and reduce starvation among competing processes under mixed workloads.</li>
               <li>Built multi-process scheduling tests to validate priority behavior and integrated scheduler functionality with container-management features.</li>
+              <li>Worked directly with kernel scheduling paths, process metadata, system-call plumbing, and test workloads to reason about low-level OS behavior.</li>
             </ul>
             <div class="project-tags">
               <span class="tag">C</span>
@@ -307,10 +320,12 @@
             </div>
             <h3>School Database Management System</h3>
             <p class="project-date"><i class="fas fa-calendar-alt"></i> Apr 2023 - May 2023</p>
+            <p class="project-summary">A SQL-backed school information system for managing students, faculty, courses, registration, and support workflows. <a href="https://github.com/mazenesaadi/School-Database-System-Project" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View GitHub repository</a></p>
             <ul class="project-details">
               <li>Built a relational database system for students, faculty, and administrators, including course registration, scheduling, and prerequisite checks.</li>
               <li>Designed SQL queries and role-based workflows to support course enrollment, faculty updates, and administrative access.</li>
               <li>Collaborated on schema design and implementation so the system could support organized, repeatable academic operations.</li>
+              <li>Modeled student lifecycle transitions and support-chat functionality so users could access academic records and route inquiries through the system.</li>
             </ul>
             <div class="project-tags">
               <span class="tag">MySQL</span>
